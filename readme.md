@@ -1,3 +1,5 @@
+### 依赖 hammer.js
+
 ```js
 var arr = [];
 for (var i = 0; i < 500; i++) {
