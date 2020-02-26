@@ -132,7 +132,7 @@ function CustomMapJs(customOptions) {
             options.bgX = options.rX = -(w - boxWidth) / 2;
             options.bgY = options.rY = 0;
         }
-        options.minScaleSize = options.scaleSize * 0.6; //最小缩放比例为初始的0.6
+        options.minScaleSize = options.scaleSize * 1; //最小缩放比例为初始的0.6
 
         options.img.style.width = w + "px";
         options.img.style.height = h + "px";
@@ -147,8 +147,8 @@ function CustomMapJs(customOptions) {
         options.img = options.$box.getElementsByTagName("img")[0]; //图片
 
         options.img.onload = function() {
-            options.imgw = parseInt(options.img.offsetWidth); //图片宽度
-            options.imgh = parseInt(options.img.offsetHeight); //图片高度
+            options.imgw = parseInt(options.img.naturalWidth); //图片宽度
+            options.imgh = parseInt(options.img.naturalHeight); //图片高度
             _this.InitImgSize();
         };
         var imgUrl = options.img.getAttribute("url");
